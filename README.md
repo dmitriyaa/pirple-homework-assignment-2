@@ -15,7 +15,7 @@ You are building the API for a pizza-delivery company. Don't worry about a front
 P.S. Don't forget to document how a client should interact with the API you create!
 
 # Pizza Delivery API documentation
-
+Note: Before using the api, please go to the /lib/config.js file and add stipe and mailgun tokens
 ## Process
 1. Create a user
 2. Create a token
