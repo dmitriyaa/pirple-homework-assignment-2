@@ -69,22 +69,35 @@ Required fields:
 DELETE /users
 ```
 
+
 ## Tokens
 Users can log in and log out by creating or destroying a token.
-### Create new token
-route: /tokens
-method: POST
-parameters:
-    email - string
-    password - string
+### Create new token:
+Required fields:
+* email - string
+* password - string
+```
+POST /tokens
+```
+
 ### Get token information
-route: /tokens
-method: GET
-parameters:
-    id - string
-### Extend token duration
-route: /tokens
-method: PUT
-parameters:
-    id - string
-    extend - boolean
+Required fields:
+* id - string
+```
+GET /tokens
+```
+
+### Update token information:
+Required fields:
+* id - string
+* expires - boolean
+```
+PUT /tokens
+```
+
+### Delete token
+Required fields:
+* id - string
+```
+DELETE /tokens
+```
