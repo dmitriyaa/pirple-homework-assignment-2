@@ -13,3 +13,72 @@ You are building the API for a pizza-delivery company. Don't worry about a front
 **This is an open-ended assignment. You may take any direction you'd like to go with it, as long as your project includes the requirements. It can include anything else you wish as well.**
 
 P.S. Don't forget to document how a client should interact with the API you create!
+
+# Pizza Delivery API documentation
+
+## Instruction
+1. Create a user
+2. Create a token
+3. List a menu
+4. Add items to cart
+5. Place the order
+
+## Ping
+Checks the status of the app
+```
+GET /ping
+```
+
+## Users
+New users can be created, their information can be edited, and they can be deleted. We should store their name, email address, and street address.
+### Create new user:
+Required fields:
+* name - string
+* email - string
+* password - string
+* streetAddress -string
+POST /users
+
+### Get user information
+route: /users
+method: GET
+headers: token
+parameters:
+    email - string
+### Update user information:
+route: /users
+method: PUT
+headers: token
+parameters:
+    email - string
+    Note: at least one of below should be specified
+        name - string
+        password - string
+        streetAddress -string
+### Delete user
+route: /users
+method: DELETE
+headers: token
+parameters:
+    email - string
+
+
+## Tokens
+Users can log in and log out by creating or destroying a token.
+### Create new token
+route: /tokens
+method: POST
+parameters:
+    email - string
+    password - string
+### Get token information
+route: /tokens
+method: GET
+parameters:
+    id - string
+### Extend token duration
+route: /tokens
+method: PUT
+parameters:
+    id - string
+    extend - boolean
