@@ -16,12 +16,17 @@ P.S. Don't forget to document how a client should interact with the API you crea
 
 # Pizza Delivery API documentation
 Note: Before using the api, please go to the /lib/config.js file and add stipe and mailgun tokens
+example of  config:
+'stripeToken': 'stripekeytoken',
+'mailgunToken': 'mailguntoken',
+'mailgunEmailDomain': 'sandbox123123123.mailgun.org'
 ## Process
 1. Create a user
 2. Create a token
 3. List a menu
 4. Add items to cart
-5. Place the order
+5. Double check what's inside the cart
+6. Place the order
 
 ## Ping
 Checks the status of the app
