@@ -37,31 +37,37 @@ Required fields:
 * email - string
 * password - string
 * streetAddress -string
+```
 POST /users
+```
 
 ### Get user information
-route: /users
-method: GET
-headers: token
-parameters:
-    email - string
-### Update user information:
-route: /users
-method: PUT
-headers: token
-parameters:
-    email - string
-    Note: at least one of below should be specified
-        name - string
-        password - string
-        streetAddress -string
-### Delete user
-route: /users
-method: DELETE
-headers: token
-parameters:
-    email - string
+Requires token in headers
+Required fields:
+* email - string
+```
+GET /users
+```
 
+### Update user information:
+Requires token in headers
+Required fields:
+* email - string
+At least one of below should be specified:
+* name - string
+* password - string
+* streetAddress -string
+```
+PUT /users
+```
+
+### Delete user
+Requires token in headers
+Required fields:
+* email - string
+```
+DELETE /users
+```
 
 ## Tokens
 Users can log in and log out by creating or destroying a token.
