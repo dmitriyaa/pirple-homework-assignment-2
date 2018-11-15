@@ -158,6 +158,7 @@ GET /orders
 Requires token in headers
 Required data:
 * source - string (Stripe source key)
+source is a payment source to be charged, for testing you could use 'tok_visa'
 
 ```
 POST /orders
